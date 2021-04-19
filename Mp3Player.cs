@@ -8,41 +8,72 @@ namespace AudioDevices.Devices
 {
     public class Mp3Player : AudioDevice, IDisplay, ITrackList
     {
-        private readonly int _mBSize = 0;
+        private int _mBSize = 0;
         private int _DisplayWidth;
         private int _DisplayHeight;
-        private TrackList _Tracklist;
+        private TrackList _TrackList;
 
-        public int DisplayWidth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int DisplayHeight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public int TotalPixels => throw new NotImplementedException();
-
-        public TrackList TrackList => throw new NotImplementedException();
-
-        public void AddTrackList(TrackList trackList)
+        public Mp3Player(int serialId)
         {
-            throw new NotImplementedException();
+            _serialId = serialId;
         }
-
-        public override string DisplayStorageCapacity()
+        public int DisplayWidth
         {
-            throw new NotImplementedException();
+            get { return _DisplayWidth; }
+            set { _DisplayWidth = value; }
         }
-
+        public int DisplayHeight
+        {
+            get { return _DisplayHeight; }
+            set { _DisplayHeight = value; }
+        }
+        public int TotalPixels
+        {
+            get { return _DisplayWidth * _DisplayHeight; }
+        }
+        public int MbSize
+        {
+            get { return _mBSize; }
+        }
+        public TrackList TrackList => new TrackList();
         public string GetResolutionInfo()
         {
-            throw new NotImplementedException();
+            return $"Resolution: {TotalPixels} pixels.";
         }
-
+        public override string DisplayStorageCapacity()
+        {
+            if (_mBSize < 0)
+            {
+                return "Storage capacity unknown.";
+            }
+            else return $"{_mBSize} mB.";
+        }
         public bool HasTracks()
         {
-            throw new NotImplementedException();
+            if (TrackList.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-
+        public void AddTrackList(TrackList trackList)
+        {
+            trackList.Add(new Track());
+        }
         public void RemoveTrackList()
         {
-            throw new NotImplementedException();
+            TrackList.Remove(new Track());
         }
+        //public void AddTrackList(TrackList trackList)
+        //{
+        //    trackList.Add(new Tracks());
+        //}
+        //public void RemoveTrackList()
+        //{
+        //    trackList.Remove(new Tracks());
+        //}
     }
 }

@@ -17,6 +17,7 @@ namespace AudioDevices.Devices
             _serialId = serialId;
         }
 
+
         public int DisplayWidth
         {
             get { return _DisplayWidth; }
