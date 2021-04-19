@@ -26,6 +26,7 @@ namespace AudioDevices.Tracks
         Rock,
         Soul,
         Trance,
-        Techno
+        Techno,
+        Kkona
     }
 }
