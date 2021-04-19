@@ -17,8 +17,7 @@ namespace AudioDevices.Interfaces
         public interface ITrackList
         {
             TrackList TrackList { get; }
-            
-            
+                        
             bool HasTracks();
             void AddTrackList(TrackList trackList);
             void RemoveTrackList();
