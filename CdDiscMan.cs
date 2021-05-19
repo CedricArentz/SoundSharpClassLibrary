@@ -16,8 +16,6 @@ namespace AudioDevices.Devices
         {
             _serialId = serialId;
         }
-
-
         public int DisplayWidth
         {
             get { return _DisplayWidth; }
@@ -32,16 +30,15 @@ namespace AudioDevices.Devices
         {
             get { return _DisplayWidth * _DisplayHeight; }
         }
-
         public int MbSize
         {
             get { return _mBSize; }
+  
         }
         public bool IsEjected
         {
             get { return _isEjected; }
         }
-
 
         public override string DisplayStorageCapacity()
         {

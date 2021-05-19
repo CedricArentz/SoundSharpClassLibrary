@@ -34,6 +34,7 @@ namespace AudioDevices.Devices
         public int MbSize
         {
             get { return _mBSize; }
+            set { _mBSize = value; }
         }
         public TrackList TrackList => new TrackList();
         public string GetResolutionInfo()
@@ -48,9 +49,9 @@ namespace AudioDevices.Devices
             }
             else return $"{_mBSize} mB.";
         }
-        public bool HasTracks()
+        public bool HasTracks(TrackList trackList)
         {
-            if (TrackList.Count > 0)
+            if (trackList.Count > 0)
             {
                 return true;
             }
@@ -63,9 +64,9 @@ namespace AudioDevices.Devices
         {
             trackList.Add(new Track());
         }
-        public void RemoveTrackList()
+        public void RemoveTrackList(TrackList trackList)
         {
-            TrackList.Remove(new Track());
+            trackList.Remove(new Track());
         }
         //public void AddTrackList(TrackList trackList)
         //{

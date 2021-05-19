@@ -48,18 +48,18 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="AudioDevices.Interfaces.Interfaces">
-    <Position X="9" Y="0.5" Width="1.5" />
+  <Class Name="AudioDevices.Interfaces.Interfaces" Collapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Interface Name="AudioDevices.Interfaces.Interfaces.ITrackList" Collapsed="true">
+      <Interface Name="AudioDevices.Interfaces.Interfaces.IDisplay" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Interfaces.cs</NewMemberFileName>
         </TypeIdentifier>
       </Interface>
-      <Interface Name="AudioDevices.Interfaces.Interfaces.IDisplay" Collapsed="true">
+      <Interface Name="AudioDevices.Interfaces.Interfaces.ITrackList" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Interfaces.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -73,7 +73,7 @@
   <Class Name="AudioDevices.Devices.Mp3Player">
     <Position X="11" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAQAAAEAAAAQEAAQMACAAAIAAAgAAAAAQAACAAAAAA=</HashCode>
+      <HashCode>AgQQAAAAAAAAQEAAQMACAAAIAAAgAAQAAQAACAAAAAA=</HashCode>
       <FileName>Mp3Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -81,7 +81,7 @@
   <Enum Name="AudioDevices.Tracks.Category" Collapsed="true">
     <Position X="7.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BEIIACAgAAAAkAAAAEAAAAgQABKAAAAAAIgAIEIABAg=</HashCode>
+      <HashCode>BEoIACAgAAAAkAAAAEAAAAgQABKAAAAAAIgAIEIABAg=</HashCode>
       <FileName>Category.cs</FileName>
     </TypeIdentifier>
   </Enum>
